@@ -5,7 +5,7 @@ package com.dalin.memoryapp;
  *
  */
 
-import com.dali.memoryapp.MemorySpiel;
+import com.dalin.memoryapp.MemorySpiel;
 
 public class MemoryApp {
 

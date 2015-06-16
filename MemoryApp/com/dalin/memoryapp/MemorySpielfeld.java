@@ -4,7 +4,7 @@ public class MemorySpielfeld {
 	
 	private MemorySpielKarte[] spielKarten;
 
-	public MemorySpielfeld() {
+	public MemorySpielfeld(String name) {
 		init();
 	}
 

@@ -1,7 +1,7 @@
 package com.dalin.memoryapp;
 
 import javax.swing.*;
-import com.dalin.memeoryapp.MemorySpielfeld;
+import com.dalin.memoryapp.MemorySpielfeld;
 
 public class MemorySpiel extends JFrame{
 
@@ -19,8 +19,13 @@ public class MemorySpiel extends JFrame{
 
 	public void init() {
 		// Alle Spiele ins Fenster hinzufügen
-		for(int i=0;i<spiele.length;i++)
-			this.add(spiele(i));
+		for(int i=0;i<spiele.length;i++) {
+			//this.add(spiele(i));
+		}
+		
+	}
+	
+	public void startGame() {
 		
 	}
 
