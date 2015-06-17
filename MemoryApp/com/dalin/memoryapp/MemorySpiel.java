@@ -1,7 +1,6 @@
 package com.dalin.memoryapp;
 
 import java.awt.BorderLayout;
-import java.awt.CardLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
@@ -11,6 +10,11 @@ import com.dalin.memoryapp.MemorySpielfeld;
 
 public class MemorySpiel extends JFrame{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private JPanel menuPanel = new JPanel(),
 				   topPanel = new JPanel(),
 				   mainPanel = new JPanel();
@@ -45,11 +49,11 @@ public class MemorySpiel extends JFrame{
 		this.getContentPane().add(topPanel, BorderLayout.SOUTH);
 		this.getContentPane().add(mainPanel, BorderLayout.CENTER);
 		
-		// Alle Spiele ins Fenster hinzufügen
+		// Alle Spiele ins Fenster hinzuf��gen
 		for(int i=0;i<spiele.length;i++) {
 			//this.add(spiele(i));
 		}
-		this.setDefaultCloseOperation(this.EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 		
 	}

@@ -25,6 +25,7 @@ public class MemoryApp {
 	 */	
 	public static void main(String[] args) {
 		new MemoryApp();
+		
 	
 	}
 }
