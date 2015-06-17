@@ -40,8 +40,10 @@ public class MemorySpiel extends JFrame{
 		topPanel.add(new JButton("World"));
 		mainPanel.setLayout(new GridLayout(3, 1));
 		for(int i=0;i<9;i++) {
-			JButton button = new JButton(new ImageIcon(com.dalin.memoryapp.img.DummyClass.class.getResource("game-"+i+".png")));
-			mainPanel.add(button);
+			MemorySpielKarte msk = new MemorySpielKarte("game-"+i);
+			
+			//JButton button = new JButton(new ImageIcon(com.dalin.memoryapp.img.DummyClass.class.getResource("game-"+i+".png")));
+			mainPanel.add(msk);
 		}
 		
 		this.setLayout(new BorderLayout(2, 2));
