@@ -1,8 +1,11 @@
 package com.dalin.memoryapp;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Point;
+import java.awt.Toolkit;
 
 import javax.swing.*;
 
@@ -11,6 +14,8 @@ import com.dalin.memoryapp.MemorySpielfeld;
 public class MemorySpiel extends JFrame{
 	
 	/**
+	 * 
+	 * 
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -44,6 +49,7 @@ public class MemorySpiel extends JFrame{
 			
 			//JButton button = new JButton(new ImageIcon(com.dalin.memoryapp.img.DummyClass.class.getResource("game-"+i+".png")));
 			mainPanel.add(msk);
+			
 		}
 		
 		this.setLayout(new BorderLayout(2, 2));
@@ -55,6 +61,8 @@ public class MemorySpiel extends JFrame{
 		for(int i=0;i<spiele.length;i++) {
 			//this.add(spiele(i));
 		}
+		
+		this.setLocation(MemorySpiel.toScreenCenter(this.getSize()));
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 		
@@ -63,6 +71,21 @@ public class MemorySpiel extends JFrame{
 	public void startGame() {
 		
 	}
+	
+	public static Point toScreenCenter (Dimension dim)
+	   {
+	      Dimension screenDim = Toolkit.getDefaultToolkit().getScreenSize();
+	      if (screenDim.getWidth() < dim.getWidth())
+	      {
+	         dim.width = (int) screenDim.getWidth();
+	      }
+	      if (screenDim.getHeight() < dim.getHeight())
+	      {
+	         dim.height = (int) screenDim.getHeight();
+	      }
+	      return new Point ( (screenDim.width - dim.width) / 2,
+	          (screenDim.height - dim.height) / 2);
+	   }
 
 }
 

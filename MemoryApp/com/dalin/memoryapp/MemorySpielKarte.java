@@ -32,7 +32,7 @@ public class MemorySpielKarte extends JButton {
 		this.setIcon(bild);
 		this.setText(name);
 		
-		soundMedia = new Media(this.getClass().getResource("game-0.mp3").toExternalForm());
+		//soundMedia = new Media(this.getClass().getResource("game-0.mp3").toExternalForm());
 		this.init();
 	}
 
@@ -47,7 +47,7 @@ public class MemorySpielKarte extends JButton {
 					@Override
 					public void run() {
 						// TODO Auto-generated method stub
-						mediaPlayer = new MediaPlayer(soundMedia);
+						//mediaPlayer = new MediaPlayer(soundMedia);
 						if(mediaPlayer!=null)
 							mediaPlayer.play();
 						else System.out.println("ERROR: No sound media to play.");
